@@ -1,0 +1,76 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+function Header() {
+  return (
+    <nav className="navbar navbar-expand-md navbar-light bg-light sticky-top">
+      <div className="container-fluid">
+        {/* <a href="" className="navbar-brand" href="#">
+          <img
+            src="https://lh3.googleusercontent.com/proxy/OF1LeE6J-hR0X9LSKYB1MLsqMG3WnkFE4uPF8ekfoDhZD6RStZiOtwz5-fxJUINLYCDaOIu5urSYoqvLXZAp2VysaXKBhjRiWHi10imi9JzCBQMjSh9vJYkRDQ_qB-AE"
+            alt=""
+          />
+        </a> */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarResponsive">
+          <img
+            src="https://lh3.googleusercontent.com/proxy/OF1LeE6J-hR0X9LSKYB1MLsqMG3WnkFE4uPF8ekfoDhZD6RStZiOtwz5-fxJUINLYCDaOIu5urSYoqvLXZAp2VysaXKBhjRiWHi10imi9JzCBQMjSh9vJYkRDQ_qB-AE"
+            alt="logooooo"
+            width="auto"
+            height="100rem"
+            classname="logologo"
+            border-radius="5px;"
+          />
+          <h5>Responsible Representation</h5>
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item active">
+              <a className="nav-link" href="#">
+                <Link to="/home">Home</Link>
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                <Link to="/state_agenciess">State Agencies</Link>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                <Link to="/state_budgets">State Budget</Link>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                <Link to="/minority_businesses">Minority Businesses</Link>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                <Link to="/HOR">House of Representatives</Link>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                <Link to="/senates">Senate</Link>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                <Link to="/activism">Activism</Link>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+export default Header;
