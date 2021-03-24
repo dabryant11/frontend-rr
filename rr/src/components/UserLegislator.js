@@ -11,31 +11,29 @@ function UserLegislator({ userLegislators }) {
   // console.log(userLegislators[0].legislator.name);
   // const mapLegislators = userLegislators[0];
 
-  function handleDeleteClick(e, legislator) {
-    console.log(e);
-    console.log(e.target.attributes[1].nodeValue);
-    console.log("yooooo", legislator);
-    console.log(e.target.parentNode);
-    console.log(e.target);
-    console.log(e.target.value);
-    console.log(e.value);
+  function handleDeleteClick(id) {
+    console.log("maybe", id);
+    // console.log(e);
+    // console.log(e.target.attributes[1].nodeValue);
+    // console.log("yooooo", legislator);
+    // console.log(e.target.parentNode);
+    // console.log(e.target);
+    // console.log(e.target.value);
+    // console.log(e.value);
     // console.log(e.target.__reactProps$ts7i81b1slc);
     const requestOptions = {
       method: "DELETE",
     };
-    fetch(
-      `http://localhost:3000/user_legislator/${e.target.attributes[1].nodeValue}`,
-      requestOptions
-    );
+    fetch(`http://localhost:3000/user_legislator/${id}`, requestOptions);
     // setComments(comments.filter((fav) => comment.id !== id));
   }
 
   const favLegislators = userLegislators.map((legislator) => {
     // return <h1>{legislator.legislator.name}</h1>;
-    console.log("hasssssss", legislator.notes);
+    // console.log("hasssssss", legislator.id);
     return (
       <div className="col-md-4">
-        <div className="card">
+        <div className="card" data-id={legislator.id}>
           <img
             className="card-img-top"
             src={legislator.legislator.image}
@@ -74,7 +72,9 @@ function UserLegislator({ userLegislators }) {
             <br></br>
             <button
               className="btn btn-outline-secondary"
-              onClick={handleDeleteClick}
+              onClick={() => {
+                handleDeleteClick(legislator.id);
+              }}
             >
               <span role="img" value={legislator.id} aria-label="delete">
                 🗑
