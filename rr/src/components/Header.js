@@ -21,15 +21,15 @@ function Header() {
         </button>
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <img
-            src="https://lh3.googleusercontent.com/proxy/c3Ou_-ztqfPn1GNl1XO47SiFY4oM1r4-XZNTIk8-KhIVhpsAA6FOX9KVhE2pd453Kxg0t48d2h2FEzd-quBRCpFBNQwv40rIhsNrVZl4Qb1plwBIJl9js-TDLTxH7onF"
-            // src="{Logo2}"
+            // src="https://lh3.googleusercontent.com/proxy/c3Ou_-ztqfPn1GNl1XO47SiFY4oM1r4-XZNTIk8-KhIVhpsAA6FOX9KVhE2pd453Kxg0t48d2h2FEzd-quBRCpFBNQwv40rIhsNrVZl4Qb1plwBIJl9js-TDLTxH7onF"
+            src={Logo2}
             alt="logooooo"
             width="auto"
             height="100rem"
             classname="logologo"
             border-radius="5px;"
           />
-          <h5>Responsible Representation</h5>
+          {/* <h5>Responsible Representation</h5> */}
           <ul className="navbar-nav ml-auto">
             <li className="nav-item active">
               <a className="nav-link" href="#">

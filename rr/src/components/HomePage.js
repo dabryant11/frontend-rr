@@ -1,4 +1,5 @@
 import React from "react";
+import Kid from "./kid.jpeg"; // with import
 
 function HomePage() {
   return (
@@ -12,14 +13,15 @@ function HomePage() {
               camouflaged fairly well, the negative issues that accompany
               landfills remain. */}
             </p>
-            <iframe
+            {/* <iframe
               width="560"
               height="315"
               src="https://www.youtube.com/embed/cByG2ZfJP_A"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
-            ></iframe>
+            ></iframe> */}
+            <img src={Kid} />
           </div>
           <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2"></div>
         </div>

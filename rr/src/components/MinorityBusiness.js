@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import Piggy from "./hk.jpeg"; // with import
 
 function MinorityBusiness({ businesses, setBusinesses }) {
+  console.log("MB", businesses);
   const [minorityBusinessFormState, setMinorityBusinessFormState] = useState({
     name: "",
     address: "",
@@ -22,24 +24,23 @@ function MinorityBusiness({ businesses, setBusinesses }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(minorityBusinessFormState),
-    })
-      .then((r) => r.json())
-      // .then(setBusinesses);
-      .then((bizData) => {
-        const newBusinesses = [...businesses, bizData];
-        setBusinesses(newBusinesses);
-        setMinorityBusinessFormState({
-          name: "",
-          address: "",
-          rating: "",
-          image: "",
-          hours: "",
-          website: "",
-          twitter: "",
-          ig: "",
-          facebook: "",
-        });
-      });
+    }).then((r) => r.json());
+    // .then(setBusinesses);
+    // .then((bizData) => {
+    //   const newBusinesses = [...businesses, bizData];
+    //   setBusinesses(newBusinesses);
+    //   setMinorityBusinessFormState({
+    //     name: "",
+    //     address: "",
+    //     rating: "",
+    //     image: "",
+    //     hours: "",
+    //     website: "",
+    //     twitter: "",
+    //     ig: "",
+    //     facebook: "",
+    //   });
+    // });
   }
 
   function updateFormState(e) {
@@ -55,12 +56,20 @@ function MinorityBusiness({ businesses, setBusinesses }) {
   return (
     <div className="new-plant-form">
       <h1> New Minority Businesses</h1>;
+      <img src={Piggy} />
       <form onSubmit={handleSubmit}>
-        <input
+        {/* <input
           type="text"
           name="name"
           value={minorityBusinessFormState.name}
           placeholder="Biz name"
+          onChange={updateFormState}
+        /> */}
+        <input
+          type="text"
+          name="name"
+          value={minorityBusinessFormState.name}
+          placeholder="bizzzzzname"
           onChange={updateFormState}
         />
         <input
