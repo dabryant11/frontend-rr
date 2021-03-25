@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SenateLegislator from "./SenateLegislator";
 
 function Senate() {
   return (
@@ -20,7 +21,8 @@ function Senate() {
               />
               <div className="card-body"></div>
               <div className="card-footer">
-                <h4 className="card-title">Legislators</h4>
+                {/* <h4 className="card-title">Legislators</h4> */}
+                <Link to={`/senate/legislators`}> Legislators</Link>
               </div>
             </div>
           </div>
@@ -33,7 +35,8 @@ function Senate() {
               />
               <div className="card-body"></div>
               <div className="card-footer">
-                <h4 className="card-title">Bills</h4>
+                {/* <h4 className="card-title">Bills</h4> */}
+                <Link to={`/HOR/bills`}> Bills</Link>
               </div>
             </div>
           </div>
@@ -46,7 +49,8 @@ function Senate() {
               />
               <div className="card-body"></div>
               <div className="card-footer">
-                <h4 className="card-title">Committees</h4>
+                {/* <h4 className="card-title">Committees</h4> */}
+                <Link to={`/senate/committees`}> Committees</Link>
               </div>
             </div>
           </div>

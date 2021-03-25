@@ -10,7 +10,11 @@ import Activism from "./Activism";
 import UserLegislator from "./UserLegislator";
 import HOR from "./HOR";
 import HORLegislator from "./HORLegislator";
+import HORBill from "./HORBill";
+import HORCommittee from "./HORCommittee.js";
 import Senate from "./Senate";
+import SenateCommittee from "./SenateCommittee";
+import SenateLegislator from "./SenateLegislator";
 import StateAgency from "./StateAgency";
 import StateBudget from "./StateBudget";
 import Chambers from "./Chambers";
@@ -20,6 +24,8 @@ function App() {
   const [legislators, setLegislators] = useState([]);
   const [businesses, setBusinesses] = useState([]);
   const [userLegislators, setUserLegislators] = useState([]);
+  const [bills, setBills] = useState([]);
+  const [committees, setCommittees] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/user_legislators")
@@ -41,8 +47,30 @@ function App() {
       });
   }, []);
 
+  useEffect(() => {
+    fetch("http://localhost:3000/bills")
+      .then((r) => r.json())
+      .then((bills) => {
+        setBills(bills);
+      });
+  }, []);
   // console.log("aghhhhhhh", legislators);
 
+  useEffect(() => {
+    fetch("http://localhost:3000/committees")
+      .then((r) => r.json())
+      .then((committees) => {
+        setCommittees(committees);
+      });
+  }, []);
+
+  const senateCommittees = committees.filter(
+    (committee) => committee.chamber === "Senate"
+  );
+  const houseOfRepresentativesCommittees = committees.filter(
+    (committee) => committee.chamber === "House of Representatives"
+  );
+  console.log(houseOfRepresentativesCommittees);
   const senators = legislators.filter(
     (legislator) => legislator.title === "Senator"
   );
@@ -73,7 +101,7 @@ function App() {
           <Activism />
         </Route>
         <Route exact path="/HOR">
-          <HOR representatives={representatives} />
+          <HOR representatives={representatives} bills={bills} />
         </Route>
         <Route exact path="/senate">
           <Senate senators={senators} />
@@ -96,8 +124,21 @@ function App() {
             setBusinesses={setBusinesses}
           />
         </Route>
+        {/* <Link to={`/HOR/bills`}> Bills</Link> */}
+        <Route exact path="/HOR/bills">
+          <HORBill bills={bills} />
+        </Route>
+        <Route exact path="/HOR/committees">
+          <HORCommittee committees={houseOfRepresentativesCommittees} />
+        </Route>
+        <Route exact path="/senate/committees">
+          <SenateCommittee committees={senateCommittees} />
+        </Route>
         <Route exact path="/HOR/legislators">
           <HORLegislator representatives={representatives} />
+        </Route>
+        <Route exact path="/senate/legislators">
+          <SenateLegislator senators={senators} />
         </Route>
         <Route exact path="/chambers">
           <Chambers

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import HORLegislator from "./HORLegislator";
 
-function HOR({ representatives }) {
+function HOR({ representatives, bills }) {
   // console.log("yooooo", representatives);
   return (
     <div className="container-fluid padding">
@@ -36,7 +36,8 @@ function HOR({ representatives }) {
               />
               <div className="card-body"></div>
               <div className="card-footer">
-                <h4 className="card-title">Bills</h4>
+                {/* <h4 className="card-title">Bills</h4> */}
+                <Link to={`/HOR/bills`}> Bills</Link>
               </div>
             </div>
           </div>
@@ -49,7 +50,8 @@ function HOR({ representatives }) {
               />
               <div className="card-body"></div>
               <div className="card-footer">
-                <h4 className="card-title">Committees</h4>
+                {/* <h4 className="card-title">Committees</h4> */}
+                <Link to={`/HOR/committees`}> Committees</Link>
               </div>
             </div>
           </div>

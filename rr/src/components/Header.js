@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "./rr.png"; // with import
+import Logo2 from "./flag.png"; // with import
+// import Logo from “./rr.png”;
 
 function Header() {
   return (
     <nav className="navbar navbar-expand-md navbar-light bg-light sticky-top">
       <div className="container-fluid">
         {/* <a href="" className="navbar-brand" href="#">
-          <img
-            src="https://lh3.googleusercontent.com/proxy/vwTJf22bitlm3ERLf4Cg1EHcjLv3Bvut0ddwIiPkFdnxy7462XZdxZHctM73hwMtVBBYuFQKGxw1uXv22Mqup0iU2DFjfxX86BV5VwqKJNKfy52IDpJ1kHdvKUBGHUaa"
-            alt=""
-          />
+          <img src="{Logo2}" alt="" />
         </a> */}
         <button
           className="navbar-toggler"
@@ -22,7 +22,7 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <img
             src="https://lh3.googleusercontent.com/proxy/c3Ou_-ztqfPn1GNl1XO47SiFY4oM1r4-XZNTIk8-KhIVhpsAA6FOX9KVhE2pd453Kxg0t48d2h2FEzd-quBRCpFBNQwv40rIhsNrVZl4Qb1plwBIJl9js-TDLTxH7onF"
-            // src="/Users/darienbryant/Flatiron/5phase/frontend-responsible-representation/rr/src/rr.png"
+            // src="{Logo2}"
             alt="logooooo"
             width="auto"
             height="100rem"
