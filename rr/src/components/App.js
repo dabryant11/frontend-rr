@@ -18,6 +18,7 @@ import SenateLegislator from "./SenateLegislator";
 import StateAgency from "./StateAgency";
 import StateBudget from "./StateBudget";
 import Chambers from "./Chambers";
+import CampaignFinance from "./CampaignFinance";
 import MinorityBusiness from "./MinorityBusiness";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
   const [userLegislators, setUserLegislators] = useState([]);
   const [bills, setBills] = useState([]);
   const [committees, setCommittees] = useState([]);
+  const [finances, setFinances] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/user_legislators")
@@ -62,6 +64,14 @@ function App() {
       .then((r) => r.json())
       .then((committees) => {
         setCommittees(committees);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/campaign_finances")
+      .then((r) => r.json())
+      .then((finances) => {
+        setFinances(finances);
       });
   }, []);
 
@@ -138,6 +148,9 @@ function App() {
         </Route>
         <Route exact path="/senate/committees">
           <SenateCommittee committees={senateCommittees} />
+        </Route>
+        <Route exact path="/HOR/campaign_finances">
+          <CampaignFinance finances={finances} />
         </Route>
         <Route exact path="/HOR/legislators">
           <HORLegislator

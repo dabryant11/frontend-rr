@@ -65,7 +65,8 @@ function HOR({ representatives, bills }) {
               />
               <div className="card-body"></div>
               <div className="card-footer">
-                <h4 className="card-title">Campaign Finances</h4>
+                {/* <h4 className="card-title">Campaign Finances</h4> */}
+                <Link to={`/HOR/campaign_finances`}> Campaign Finances</Link>
               </div>
             </div>
           </div>
