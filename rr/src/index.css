@@ -51,6 +51,10 @@ element.style {
   text-align: right;
   color: white;
 }
+.tighty {
+  text-align: right;
+  /* color: white; */
+}
 
 .center {
   display: block;

@@ -68,11 +68,11 @@ function HORLegislatorCard({
               onClick={toggleFav}
               className="btn btn-outline-secondary"
             >
-              ★
+              Added to Watchlist
             </button>
           ) : (
             <button onClick={toggleFav} className="btn btn-outline-secondary">
-              ☆
+              Add to Watchlist
             </button>
           )}
         </div>

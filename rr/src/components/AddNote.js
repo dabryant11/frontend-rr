@@ -71,7 +71,7 @@ function AddNote({
             value={commentForm.content}
             class="form-control"
             id="formGroupExampleInput"
-            placeholder="Add/edit note here..."
+            placeholder={note}
             onChange={updateFormState}
           />
           <button type="submit" class="btn btn-outline-secondary submit">

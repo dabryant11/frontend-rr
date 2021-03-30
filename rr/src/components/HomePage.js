@@ -10,14 +10,13 @@ function HomePage() {
       </div> */}
       <div className="container-fluid">
         <div className="row jumbotron">
-          <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
-            <p className="lead" className="yo">
+          <div className="row welcome text-center">
+            <div className="col-12">
               {/* Over 2,000 landfills are currently open in the United States,
               making our country an uglier place. And although they’re often
               camouflaged fairly well, the negative issues that accompany
               landfills remain. */}
-            </p>
-            {/* <iframe
+              {/* <iframe
               width="560"
               height="315"
               src="https://www.youtube.com/embed/cByG2ZfJP_A"
@@ -25,30 +24,14 @@ function HomePage() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe> */}
-            <img src={Kid} class="center" />
-          </div>
-          <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2"></div>
-        </div>
-      </div>
-      <div className="container-fluid padding">
-        <div className="row welcome text-center">
-          <div className="col-12">
-            <h1 className="display-4">Get Involved</h1>
-          </div>
-          <hr></hr>
-          <div className="col-12">
-            <p className="lead">
-              {/* Although 75% of America’s waste is recyclable, we only recycle
-              around 30% of it. We hope this application encourages you to start
-              recycling better. */}
-            </p>
-            <a target="_blank" href="https://www.change.org/search?q=ohio">
-              Petitions
-            </a>
+              <img src={Kid} class="center" />
+            </div>
+            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2"></div>
           </div>
         </div>
       </div>
-      <div className="container-fluid padding">
+
+      {/* <div className="container-fluid padding">
         <div className="row welcome text-center">
           <div className="col-12">
             <h1 className="display">Meet the Team</h1>
@@ -72,7 +55,7 @@ function HomePage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="container-fluid padding">
         <div className="row padding">
           <div className="col-lg-6">
@@ -90,7 +73,7 @@ function HomePage() {
             />
           </div>
         </div>
-        <hr className="my-4"></hr>
+        {/* <hr className="my-4"></hr> */}
       </div>
     </div>
   );

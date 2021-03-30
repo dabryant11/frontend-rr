@@ -80,24 +80,28 @@ function UserLegislator({ userLegislators, setUserLegislators }) {
     // return <h1>{legislator.legislator.name}</h1>;
     // console.log("hasssssss", legislator.id);
     return (
-      <div className="col-lg-3 col-md-6 mb-4">
-        <div className="card h-100">
-          {/* <div className="col-md-4"> */}
-          {/* <div className="card" data-id={legislator.id}> */}
-          <img
-            className="card-img-top"
-            src={legislator.legislator.image}
-            // style={{ width: "50px", height: "auto" }}
-          />
-          <div value={legislator.id} className="card-body">
-            <h1>{legislator.legislator.name}</h1>
-            {/* <h2>{representative.name}</h2> */}
-            <h4 className="card-title">
-              District: {legislator.legislator.district}
-            </h4>
-            <h5>{legislator.legislator.party}</h5>
-            <h7>{legislator.legislator.email}</h7>
-            {/* <form onSubmit={handleSubmit(legislator.id)}>
+      // <div className="col-lg-3 col-md-6 mb-4">
+      //   <div className="card h-100">
+      <div className="row welcome text-center">
+        <div className="col-12">
+          <div className="col-md-4">
+            <div className="card">
+              {/* <div className="col-md-4"> */}
+              {/* <div className="card" data-id={legislator.id}> */}
+              <img
+                className="card-img-top"
+                src={legislator.legislator.image}
+                // style={{ width: "50px", height: "auto" }}
+              />
+              <div value={legislator.id} className="card-body">
+                <h1>{legislator.legislator.name}</h1>
+                {/* <h2>{representative.name}</h2> */}
+                <h4 className="card-title">
+                  District: {legislator.legislator.district}
+                </h4>
+                <h5>{legislator.legislator.party}</h5>
+                <h7>{legislator.legislator.email}</h7>
+                {/* <form onSubmit={handleSubmit(legislator.id)}>
               <div class="form-group">
                 <label for="formGroupExampleInput">Add a Note</label>
                 <input
@@ -114,7 +118,7 @@ function UserLegislator({ userLegislators, setUserLegislators }) {
                 </button>
               </div>
             </form> */}
-            {/* {isAdding ? (
+                {/* {isAdding ? (
               <AddNote
                 key={legislator.id}
                 id={legislator.id}
@@ -122,32 +126,35 @@ function UserLegislator({ userLegislators, setUserLegislators }) {
                 note={legislator.notes}
               />
             ) : ( */}
-            {/* // <p>why not add?</p> */}
-            <br></br>
-            <button onClick={hideForm} className="btn btn-outline-secondary">
-              {hiddenForm ? "Add/edit note" : "Nah nevermind"}
-            </button>
-            {hiddenForm ? null : (
-              <AddNote
-                key={legislator.id}
-                id={legislator.id}
-                legislator_id={legislator.legislator.id}
-                note={legislator.notes}
-                setHiddenForm={setHiddenForm}
-                userLegislators={userLegislators}
-                setUserLegislators={setUserLegislators}
-              />
-              // <NewCommentForm
-              //   site={site}
-              //   setComments={setComments}
-              //   comments={comments}
-              //   setHiddenForm={setHiddenForm}
-              //   setHiddenShowForm={setHiddenShowForm}
-              // />
-            )}
-            <h6>{legislator.notes}</h6>
+                {/* // <p>why not add?</p> */}
+                <br></br>
+                <button
+                  onClick={hideForm}
+                  className="btn btn-outline-secondary"
+                >
+                  {hiddenForm ? "Add/edit note" : "Nah nevermind"}
+                </button>
+                {hiddenForm ? null : (
+                  <AddNote
+                    key={legislator.id}
+                    id={legislator.id}
+                    legislator_id={legislator.legislator.id}
+                    note={legislator.notes}
+                    setHiddenForm={setHiddenForm}
+                    userLegislators={userLegislators}
+                    setUserLegislators={setUserLegislators}
+                  />
+                  // <NewCommentForm
+                  //   site={site}
+                  //   setComments={setComments}
+                  //   comments={comments}
+                  //   setHiddenForm={setHiddenForm}
+                  //   setHiddenShowForm={setHiddenShowForm}
+                  // />
+                )}
+                <h6>{legislator.notes}</h6>
 
-            {/* {isEditing ? (
+                {/* {isEditing ? (
               <EditNote
                 // onUpdateMessage={handleUpdateMessage}
                 key={legislator.id}
@@ -168,19 +175,19 @@ function UserLegislator({ userLegislators, setUserLegislators }) {
                 ✏️
               </span>
             </button> */}
-            {/* <h6>{legislator.notes}</h6> */}
-            <br></br>
-            <button
-              className="btn btn-outline-secondary"
-              onClick={() => {
-                handleDeleteClick(legislator.id);
-              }}
-            >
-              <span role="img" value={legislator.id} aria-label="delete">
-                🗑
-              </span>
-            </button>
-            {/* {isFavorite ? (
+                {/* <h6>{legislator.notes}</h6> */}
+                <br></br>
+                <button
+                  className="btn btn-outline-secondary"
+                  onClick={() => {
+                    handleDeleteClick(legislator.id);
+                  }}
+                >
+                  <span role="img" value={legislator.id} aria-label="delete">
+                    Delete
+                  </span>
+                </button>
+                {/* {isFavorite ? (
               <button
                 value={representative.id}
                 onClick={toggleFav}
@@ -193,6 +200,8 @@ function UserLegislator({ userLegislators, setUserLegislators }) {
                 ☆
               </button>
             )} */}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -201,14 +210,16 @@ function UserLegislator({ userLegislators, setUserLegislators }) {
     );
   });
   return (
-    <div className="container-fluid padding">
+    <>
+      {/* // <div className="container-fluid padding"> */}
       {/* <h1>HOR Legislators</h1> */}
-      <div className="row padding"></div>
-      <div>
-        <h1> User Legislators</h1>
-        {favLegislators}
-      </div>
-    </div>
+      {/* <div className="row padding"></div> */}
+      {/* <div>
+        <h1> User Legislators</h1> */}
+      {favLegislators}
+      {/* </div> */}
+      {/* // </div> */}
+    </>
   );
 }
 

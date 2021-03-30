@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import Button from "react-bootstrap/Button";
 import Logo from "./rr.png"; // with import
 import Logo2 from "./flag.png"; // with import
 // import Logo from “./rr.png”;
@@ -54,10 +55,6 @@ function Header() {
           </Button>{" "}
           <Button variant="light">
             {" "}
-            <Link to="/minority_businesses">Minority Businesses</Link>
-          </Button>{" "}
-          <Button variant="light">
-            {" "}
             <Link to="/state_budgets">State Budgets</Link>
           </Button>{" "}
           <Button variant="light">
@@ -66,12 +63,26 @@ function Header() {
           </Button>{" "}
           <Button variant="light">
             {" "}
-            <Link to="/activism">Activism</Link>
+            {/* <Link to="/state_agencies">State Agencies</Link> */}
+            <Link to="/HOR">House of Representatives</Link>
           </Button>{" "}
           <Button variant="light">
             {" "}
-            <Link to="/user_legislators">User Legislators</Link>
+            {/* <Link to="/state_agencies">State Agencies</Link> */}
+            <Link to="/senate">Senate</Link>
           </Button>{" "}
+          <Button variant="light">
+            {" "}
+            <Link to="/user_legislators">Watchlist</Link>
+          </Button>{" "}
+          <Button variant="light">
+            {" "}
+            <Link to="/activism">Activism</Link>
+          </Button>{" "}
+          {/* <Button variant="light">
+            {" "}
+            <Link to="/minority_businesses">Minority Businesses</Link>
+          </Button>{" "} */}
           {/* <Dropdown>
           <Dropdown.Toggle variant="success" id="dropdown-basic">
             Dropdown Button<Link to="/user_legislators">User Legislators</Link>
@@ -83,28 +94,6 @@ function Header() {
             <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown> */}
-          <Dropdown as={ButtonGroup}>
-            <Dropdown.Toggle id="dropdown-custom-1" variant="light">
-              Chambers
-              {/* <Link to="/chambers">Chambers</Link> */}
-            </Dropdown.Toggle>
-            <Dropdown.Menu className="super-colors">
-              {/* <Dropdown.Item eventKey="1">Action</Dropdown.Item> */}
-              <Dropdown.Item eventKey="1">
-                {" "}
-                <Link to="/HOR">House of Representatives</Link>
-              </Dropdown.Item>
-              <Dropdown.Item eventKey="1">
-                <Link to="/senate">Senate</Link>
-              </Dropdown.Item>
-              {/* <Dropdown.Item eventKey="2">Another action</Dropdown.Item> */}
-              {/* <Dropdown.Item eventKey="3" active>
-              Active Item
-            </Dropdown.Item> */}
-              {/* <Dropdown.Divider />
-            <Dropdown.Item eventKey="4">Separated link</Dropdown.Item> */}
-            </Dropdown.Menu>
-          </Dropdown>{" "}
           {/* <img
             // src="https://lh3.googleusercontent.com/proxy/c3Ou_-ztqfPn1GNl1XO47SiFY4oM1r4-XZNTIk8-KhIVhpsAA6FOX9KVhE2pd453Kxg0t48d2h2FEzd-quBRCpFBNQwv40rIhsNrVZl4Qb1plwBIJl9js-TDLTxH7onF"
             src={Logo2}
