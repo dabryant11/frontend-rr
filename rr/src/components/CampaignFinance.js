@@ -8,7 +8,6 @@ function CampaignFinance({ finances }) {
   //   if (!sortBy) {
   //     return 0;
   //   } else {
-  //     console.log(listing1);
   //     return listing1[sortBy].localeCompare(listing2[sortBy]);
   //   }
   // });

@@ -58,7 +58,6 @@ function EditNote({
     // const data = {
     //   messageBody,
     // };
-    // console.log("DDDDddddddd", messageBody);
     // console.log("subbbb", id);
     // console.log("leggggg", legislator_id);
 
