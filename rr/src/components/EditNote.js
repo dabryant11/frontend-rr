@@ -58,8 +58,6 @@ function EditNote({
     // const data = {
     //   messageBody,
     // };
-    // console.log("subbbb", id);
-    // console.log("leggggg", legislator_id);
 
     fetch(`http://localhost:3000/user_legislator/${id}`, {
       method: "PATCH",
